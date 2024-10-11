@@ -1,0 +1,9 @@
+version: '3'
+services:
+  apex-dev:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - SFDX_CONTAINER_MODE=true
+    command: tail -f /dev/null
